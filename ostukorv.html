@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="et">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Samm &amp; Stiil ostukorv ja tellimuse vorm.">
+  <title>Ostukorv | Samm &amp; Stiil</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark fixed-top py-3" data-bs-theme="dark" aria-label="Põhinavigatsioon">
+    <div class="container">
+      <a class="navbar-brand me-lg-5" href="index.html">Samm &amp; Stiil</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Ava navigatsioon"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNavigation">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="womenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Naised</a><ul class="dropdown-menu" aria-labelledby="womenDropdown"><li><a class="dropdown-item" href="index.html#tooted">Kingad</a></li><li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="index.html#tooted">Saapad</a></li></ul></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="menDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mehed</a><ul class="dropdown-menu" aria-labelledby="menDropdown"><li><a class="dropdown-item" href="index.html#tooted">Kingad</a></li><li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="index.html#tooted">Saapad</a></li></ul></li>
+          <li class="nav-item"><a class="nav-link" href="meist.html">Meist</a></li>
+        </ul>
+        <form class="d-flex me-lg-2 mb-2 mb-lg-0" role="search"><div class="input-group"><span class="input-group-text"><i class="bi bi-search" aria-hidden="true"></i></span><input class="form-control" type="search" placeholder="Otsi tooteid" aria-label="Otsi tooteid"></div></form>
+        <div class="d-flex gap-1"><button class="btn btn-link text-light" type="button" aria-label="Kasutajakonto"><i class="bi bi-person" aria-hidden="true"></i></button><a class="btn btn-primary" href="ostukorv.html" aria-label="Ostukorv" aria-current="page"><i class="bi bi-cart3" aria-hidden="true"></i><span class="badge text-bg-light ms-1">1</span></a></div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <div class="mb-5"><p class="text-primary fw-semibold text-uppercase mb-1">Turvaline ostlemine</p><h1 class="display-5 fw-bold">Vormista tellimus</h1><p class="lead text-secondary mb-0">Kontrolli ostukorvi ja sisesta tarneandmed.</p></div>
+    <form action="#" method="post">
+      <div class="row g-5">
+        <div class="col-lg-7">
+          <section class="card border-0 shadow-sm mb-4" aria-labelledby="customerHeading">
+            <div class="card-body p-4 p-md-5">
+              <h2 class="h4 mb-4" id="customerHeading"><span class="badge rounded-pill text-bg-primary me-2">1</span>Kontaktandmed</h2>
+              <div class="row g-3">
+                <div class="col-md-6"><label for="firstName" class="form-label">Eesnimi</label><input type="text" class="form-control" id="firstName" name="eesnimi" autocomplete="given-name" required></div>
+                <div class="col-md-6"><label for="lastName" class="form-label">Perekonnanimi</label><input type="text" class="form-control" id="lastName" name="perekonnanimi" autocomplete="family-name" required></div>
+                <div class="col-md-6"><label for="email" class="form-label">E-post</label><input type="email" class="form-control" id="email" name="epost" autocomplete="email" placeholder="nimi@naide.ee" required></div>
+                <div class="col-md-6"><label for="phone" class="form-label">Telefon</label><input type="tel" class="form-control" id="phone" name="telefon" autocomplete="tel" placeholder="+372 5555 5555" required></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="card border-0 shadow-sm mb-4" aria-labelledby="deliveryHeading">
+            <div class="card-body p-4 p-md-5">
+              <h2 class="h4 mb-4" id="deliveryHeading"><span class="badge rounded-pill text-bg-primary me-2">2</span>Tarneviis</h2>
+              <fieldset>
+                <legend class="visually-hidden">Vali tarneviis</legend>
+                <div class="form-check border rounded-3 p-3 ps-5 mb-3"><input class="form-check-input" type="radio" name="tarneviis" id="parcel" value="pakiautomaat" checked><label class="form-check-label d-flex justify-content-between gap-3 w-100" for="parcel"><span><strong>Pakiautomaat</strong><small class="d-block text-secondary">1–3 tööpäeva</small></span><strong>0 €</strong></label></div>
+                <div class="form-check border rounded-3 p-3 ps-5"><input class="form-check-input" type="radio" name="tarneviis" id="courier" value="kuller"><label class="form-check-label d-flex justify-content-between gap-3 w-100" for="courier"><span><strong>Kuller</strong><small class="d-block text-secondary">1–2 tööpäeva</small></span><strong>5,90 €</strong></label></div>
+              </fieldset>
+              <div class="row g-3 mt-2">
+                <div class="col-12"><label for="address" class="form-label">Tänav ja maja/korteri number</label><input type="text" class="form-control" id="address" name="aadress" autocomplete="street-address" required></div>
+                <div class="col-md-7"><label for="city" class="form-label">Linn või vald</label><input type="text" class="form-control" id="city" name="linn" autocomplete="address-level2" required></div>
+                <div class="col-md-5"><label for="postalCode" class="form-label">Postiindeks</label><input type="text" class="form-control" id="postalCode" name="postiindeks" autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{5}" placeholder="51004" required></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="card border-0 shadow-sm" aria-labelledby="paymentHeading">
+            <div class="card-body p-4 p-md-5">
+              <h2 class="h4 mb-4" id="paymentHeading"><span class="badge rounded-pill text-bg-primary me-2">3</span>Makseviis</h2>
+              <fieldset>
+                <legend class="visually-hidden">Vali makseviis</legend>
+                <div class="form-check border rounded-3 p-3 ps-5 mb-3"><input class="form-check-input" type="radio" name="makseviis" id="bank" value="pangalingid" checked><label class="form-check-label d-flex align-items-center gap-3" for="bank"><i class="bi bi-bank payment-icon" aria-hidden="true"></i><span><strong>Pangalingiga</strong><small class="d-block text-secondary">Swedbank, SEB, LHV, Coop Pank</small></span></label></div>
+                <div class="form-check border rounded-3 p-3 ps-5"><input class="form-check-input" type="radio" name="makseviis" id="card" value="kaart"><label class="form-check-label d-flex align-items-center gap-3" for="card"><i class="bi bi-credit-card payment-icon" aria-hidden="true"></i><span><strong>Maksekaardiga</strong><small class="d-block text-secondary">Visa või Mastercard</small></span></label></div>
+              </fieldset>
+            </div>
+          </section>
+        </div>
+
+        <div class="col-lg-5">
+          <aside class="card border-0 shadow checkout-summary" aria-labelledby="summaryHeading">
+            <div class="card-body p-4">
+              <h2 class="h4 mb-4" id="summaryHeading">Teie ostukorv</h2>
+              <div class="d-flex gap-3 pb-4 border-bottom"><img src="boots.jpg" class="cart-thumb rounded-3" alt="Pruunid Rada saapad"><div class="flex-grow-1"><div class="d-flex justify-content-between gap-2"><h3 class="h6 mb-1">Rada saapad</h3><strong>199 €</strong></div><p class="small text-secondary mb-2">Suurus: 39</p><label for="quantity" class="form-label small">Kogus</label><select class="form-select form-select-sm w-auto" id="quantity" name="kogus"><option>1</option><option>2</option><option>3</option></select></div></div>
+              <dl class="row my-4"><dt class="col-7 fw-normal">Vahesumma</dt><dd class="col-5 text-end">199 €</dd><dt class="col-7 fw-normal">Tarne</dt><dd class="col-5 text-end text-success">Tasuta</dd><dt class="col-7 fs-5 pt-3 border-top">Kokku</dt><dd class="col-5 fs-5 fw-bold text-end pt-3 border-top">199 €</dd></dl>
+              <div class="form-check mb-4"><input class="form-check-input" type="checkbox" id="terms" name="tingimused" required><label class="form-check-label small" for="terms">Nõustun <a href="#">müügitingimuste</a> ja <a href="#">privaatsuspoliitikaga</a>.</label></div>
+              <button type="submit" class="btn btn-primary btn-lg w-100"><i class="bi bi-lock me-2" aria-hidden="true"></i>Kinnita ja maksa</button>
+              <p class="small text-secondary text-center mt-3 mb-0"><i class="bi bi-shield-check me-1" aria-hidden="true"></i>Turvaline krüpteeritud makse</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><div class="row g-4 justify-content-between">
+      <div class="col-md-5"><h2 class="h4">Samm &amp; Stiil</h2><p class="text-white-50 mb-0">Kvaliteetsed jalanõud kindlaks sammuks.</p></div>
+      <div class="col-md-4"><h2 class="h5">Kontakt</h2><address class="mb-0"><div><i class="bi bi-geo-alt me-2" aria-hidden="true"></i>Riia 23, Tartu</div><div><i class="bi bi-telephone me-2" aria-hidden="true"></i><a class="footer-link" href="tel:+37255550101">+372 5555 0101</a></div><div><i class="bi bi-envelope me-2" aria-hidden="true"></i><a class="footer-link" href="mailto:tere@sammjastiil.ee">tere@sammjastiil.ee</a></div></address></div>
+      <div class="col-md-auto"><h2 class="h5">Jälgi meid</h2><div class="d-flex gap-2"><a class="social-link" href="https://www.facebook.com/" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a><a class="social-link" href="https://www.instagram.com/" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a><a class="social-link" href="https://www.youtube.com/" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a></div></div>
+    </div><hr class="border-secondary my-4"><p class="small text-white-50 mb-0">&copy; 2026 Samm &amp; Stiil. Kõik õigused kaitstud.</p></div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
